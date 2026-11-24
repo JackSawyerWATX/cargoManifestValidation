@@ -67,3 +67,6 @@ function processManifest(manifest) {
     console.log(errors)
   }
 }
+
+const manifest = require("./manifest.json");
+processManifest(manifest);

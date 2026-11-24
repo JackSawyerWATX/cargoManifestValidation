@@ -1,0 +1,7 @@
+{
+  "containerId": 1001,
+  "destination": "Seattle",
+  "weight": 220.46,
+  "unit": "lb",
+  "hazmat": false
+}
