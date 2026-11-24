@@ -55,5 +55,15 @@ function validateManifest(manifest) {
 }
 
 function processManifest(manifest) {
-  
+  let errors = validateManifest(manifest);
+  let errorKeys = Object.keys(errors);
+
+  if (errorKeys.length === 0) {
+    let updatedManifest = normalizeUnits(manifest);
+    console.log("Validation success: " + updatedManifest.containerId)
+    console.log("Total weight: " + updatedManifest.weight + " " + updatedManifest.unit)
+  } else {
+    console.log("Validation error: " + manifest.containerId);
+    console.log(errors)
+  }
 }
